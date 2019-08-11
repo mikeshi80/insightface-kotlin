@@ -1,0 +1,29 @@
+insightface:
+  model:
+    root: "/home/mikeshi/works/faces/face_model"
+    gpu: -1
+    image-width: 112
+    image-height: 112
+    recognition:
+      name: "face_model"
+      threshold: 1.24
+    alignment:
+      name: "det"
+      min-size: 20
+      threshold:
+        - 0.6
+        - 0.7
+        - 0.8
+      factor: 0.709
+      batch-size: 128
+
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:ai
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+
